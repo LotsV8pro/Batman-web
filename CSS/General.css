@@ -1,0 +1,144 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow-x: hidden; /* Ocultar desbordamiento horizontal */
+}
+
+/* Estilos de la cabecera */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 300px; /* Altura de la cabecera */
+    overflow: hidden; /* Para asegurar que la imagen no se desborde */
+}
+
+.header-background img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Para que la imagen cubra todo el contenedor */
+}
+
+.header-content {
+    position: absolute;
+    top: 50%; /* Centrar verticalmente */
+    left: 50%; /* Centrar horizontalmente */
+    transform: translate(-50%, -50%); /* Centrar respecto al contenido */
+    text-align: center;
+    color: #fff; /* Color del texto */
+}
+
+/* Estilos del contenido principal */
+main {
+    width: 100%; /* Ajustar el ancho al 100% de la ventana del navegador */
+    max-width: 800px; /* Ancho máximo del contenido */
+    padding: 20px;
+    margin-top: 320px; /* Ajuste para evitar que el contenido quede oculto bajo el encabezado */
+}
+
+/* Estilos de los elementos de texto en el contenido principal */
+main h1,
+main h2,
+main p {
+    margin-left: 20px; /* Margen a la izquierda */
+    margin-right: 20px; /* Margen a la derecha */
+}
+
+/* Estilos de las imágenes en el contenido principal */
+main img {
+    display: block; /* Asegurar que las imágenes se comporten como bloques */
+    margin: 0 auto; /* Centrar las imágenes horizontalmente */
+    max-width: 100%; /* Ajustar el tamaño máximo de las imágenes */
+}
+
+/* Estilos de la tabla de reparto */
+.cast-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.cast-table th,
+.cast-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.cast-table th {
+    background-color: #f2f2f2; /* Color de fondo del encabezado de la tabla */
+    font-weight: bold;
+}
+
+/* Estilos del pie de página */
+footer {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    background-color: #333; /* Color de fondo del pie de página */
+    color: #fff; /* Color del texto */
+    padding: 20px;
+}
+
+/* Estilos del banner */
+#banner {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    opacity: 1; /* Inicialmente visible */
+    transition: opacity 0.5s; /* Transición suave de la opacidad */
+}
+
+.carousel-container {
+    width: calc(100% - 60px); /* Ajuste del ancho para acomodar los botones */
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+
+.carousel {
+    display: flex;
+    position: relative;
+    transition: transform 0.5s ease; /* Agrega una transición suave al cambiar la propiedad 'transform' */
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    transform: translateX(0); /* Inicialmente no hay desplazamiento horizontal */
+}
+
+
+.carousel img {
+    max-width: 350px; /* Ajusta el tamaño máximo de las imágenes */
+    max-height: 300px; /* Altura máxima de las imágenes */
+    transition: transform 0.5s ease;
+    margin: 20px; /* Centra las imágenes horizontalmente */
+}
+
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: rgba(0, 0, 0, 0.5); /* Añade un fondo semitransparente */
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+
+#prevButton {
+    left: 10px;
+}
+
+#nextButton {
+    right: 10px;
+}
+
