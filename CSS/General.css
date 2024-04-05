@@ -13,12 +13,15 @@ body {
 
 /* Estilos de la cabecera */
 header {
-    position: fixed;
+    position: relative;
     top: 0;
     width: 100%;
-    height: 300px; /* Altura de la cabecera */
+    height: auto; /* Altura de la cabecera */
     overflow: hidden; /* Para asegurar que la imagen no se desborde */
+    z-index: 1000; /* Ajusta el z-index para que esté siempre arriba */
 }
+
+
 
 .header-background img {
     width: 100%;
@@ -40,8 +43,9 @@ main {
     width: 100%; /* Ajustar el ancho al 100% de la ventana del navegador */
     max-width: 800px; /* Ancho máximo del contenido */
     padding: 20px;
-    margin-top: 320px; /* Ajuste para evitar que el contenido quede oculto bajo el encabezado */
+    margin-top: 100px; /* Ajuste para dejar espacio para el encabezado */
 }
+
 
 /* Estilos de los elementos de texto en el contenido principal */
 main h1,
@@ -142,3 +146,27 @@ footer {
     right: 10px;
 }
 
+/* Media queries */
+@media screen and (max-width: 768px) {
+    /* Estilos para pantallas más pequeñas que 768px de ancho */
+    main {
+        margin-top: 50px; /* Reducir el margen superior */
+    }
+
+    .carousel img {
+        max-width: 250px; /* Reducir el tamaño máximo de las imágenes del carrusel */
+        max-height: 200px; /* Reducir la altura máxima de las imágenes del carrusel */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Estilos para pantallas más pequeñas que 480px de ancho */
+    main {
+        margin-top: 30px; /* Reducir aún más el margen superior */
+    }
+
+    .carousel img {
+        max-width: 180px; /* Reducir más el tamaño máximo de las imágenes del carrusel */
+        max-height: 150px; /* Reducir más la altura máxima de las imágenes del carrusel */
+    }
+}
